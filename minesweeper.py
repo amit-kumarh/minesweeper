@@ -130,6 +130,8 @@ class MineSweeper(Board):
                  if i < len(self.board)-1 and not self.isVisible(i+1, j):
                     self.flip(i+1, j)
                  if j > 0 and not self.isVisible(i, j-1):
+                    self.flip(i, j-1)
+                 if j < len(self.board)-1 and not self.isVisible(i, j+1):
                     self.flip(i, j+1)
                  if i < len(self.board)-1 and j < len(self.board[i])-1 and not self.isVisible(i+1, j+1):
                     self.flip(i+1, j+1)
